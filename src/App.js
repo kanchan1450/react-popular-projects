@@ -5,43 +5,9 @@ import { useState, useEffect } from "react";
 import Header from "./Header";
 import Body from "./Body";
 import ViewAll from "./ViewAll";
+import ContactUs from "./ContactUs";
 
 const App = () => {
-
-  const[dark, setdark] = useState("light");
-
-    useEffect(() => {
-        themeMode();
-
-    }, [dark]);
-
-    const themeMode = () =>
-    {
-        if(dark)
-        {
-            document.documentElement.classList.add('dark');
-        }
-        else {
-            document.documentElement.classList.remove('dark');
-        }
-                
-    };
-
-
-    const options = [
-        {
-            icon: "sunny",
-            text: "light",
-        },
-        {
-            icon: "moon",
-            text: "dark",
-        },
-        {
-            icon:"desktop-outline",
-            text: "system",
-        },
-    ];
     
   return (
       <Router>
@@ -51,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Body />} />
           <Route path="/products" element={<ViewAll/>} />
           <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/contact" element={<ContactUs/>} />
         </Routes>
         
       </div>

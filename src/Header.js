@@ -35,7 +35,7 @@ const Header = () => {
                 <ul className="flex p-4 m-4">
                     <Link to={"/"}><li className="px-2 underline">Home</li></Link>
                     <li className="px-2 underline">About Us</li>
-                    <li className="px-2 underline">Contact Us</li>
+                    <Link to = {"/contact"}><li className="px-2 underline">Contact Us</li></Link>
                 </ul>
                 <div className="dark:bg-slate-700 bg-gray-100 duration-100 rounded-lg ">
                     
